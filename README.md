@@ -1,28 +1,51 @@
-<<<<<<< HEAD
-# README
+開発の流れ
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+https://qiita.com/siida36/items/880d92559af9bd245c34
 
-Things you may want to cover:
+まずは main に戻る
 
-* Ruby version
+```
+git checkout main
+```
 
-* System dependencies
+リモートリポジトリの最新状態を反映
 
-* Configuration
+```
+git pull
+```
 
-* Database creation
+開発するにあたり新しいブランチを切る
 
-* Database initialization
+```
+git checkout -b feature/xxxx
+```
 
-* How to run the test suite
+反映
 
-* Services (job queues, cache servers, search engines, etc.)
+```
+git add .
+git commit -m "[add] #1 xxxxxxxxxx"
+```
+コミット種別は fix, add, update, remove のどれか
 
-* Deployment instructions
+レビューしてもらうためにリモートリポジトリへ push
+```
+git push origin feature/xxxx
+```
+これで PR を出したり、他の人がコードを確認できるようになる
+※絶対に main ブランチへいきなり push しないように!
 
-* ...
-=======
-# pasotre
->>>>>>> a6bb05d44da374a6d4eb1de5fb009094d976e259
+
+PR を出す
+
+1.Reviewerを指定する
+2.タイトルを「[ブランチ名] 要約」とする
+3.最低限の概要とmergeを受け入れる条件を書く
+4.[Create pull request]を押す
+
+PR を受け入れる
+
+merge してもよいと判断したら "+1" とコメントして Approve
+
+最後にmasterブランチへmerge
+PRの[Conversation]タブを開き、一番下の[Squash and merge]をクリックしてください。[Squash and merge]がない場合は、▼を押してプルダウンから選択してください。
