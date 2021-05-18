@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
 
+<<<<<<< HEAD
   include SessionsHelper
 
   private
@@ -10,3 +11,6 @@ class ApplicationController < ActionController::Base
     end
   end
 end
+=======
+end
+>>>>>>> d276ea1578c363de678e90761725bc32bf652c4f
