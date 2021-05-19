@@ -24,10 +24,6 @@ gem 'bcrypt', '~> 3.1.7'
 
 gem 'devise'
 
-<<<<<<< HEAD
-gem 'jquery-rails'
-=======
->>>>>>> d276ea1578c363de678e90761725bc32bf652c4f
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
