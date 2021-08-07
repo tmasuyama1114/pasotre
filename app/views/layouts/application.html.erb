@@ -18,15 +18,8 @@
   </head>
 
   <body>
-    <%= render 'layouts/navbar' %>
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-8 offset-sm-2">
-          <%= render 'layouts/flash_messages' %>
-          <%= yield %>
-        </div>
-      </div>
-    </div>
-    <%= render 'layouts/footer' %>
+      <%= render 'layouts/flash_messages' %>
+      <%= yield %>
+      <%= render 'layouts/footer' %>
   </body>
 </html>
