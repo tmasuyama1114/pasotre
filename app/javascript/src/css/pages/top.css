@@ -2,6 +2,7 @@
   color: #ff0000;
 }
 
-/* .jumbotron {
-  background-image: url("../images/pages/background.jpg");
-} */
+.jumbotron {
+  /* background-color: orange; */
+  background-image: url("../../../images/pages/background.jpg");
+}
