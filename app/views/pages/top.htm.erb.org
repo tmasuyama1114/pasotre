@@ -1,8 +1,5 @@
 <%= javascript_pack_tag 'pages/top', 'data-turbolinks-track': 'reload' %>
-<%= stylesheet_pack_tag 'pages/top' %>
-
-<div id="hoge" class="test"></div>
-
+<%= stylesheet_pack_tag 'pages/top', media: 'all', 'data-turbolinks-track': 'reload' %>
 <p id="hoge"></p>
 <%# TOP %>
 <div class="jumbotron">
