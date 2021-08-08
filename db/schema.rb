@@ -13,7 +13,6 @@
 ActiveRecord::Schema.define(version: 2021_05_24_124524) do
 
   create_table "menus", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
-    t.bigint "user_id", null: false
     t.bigint "training_id", null: false
     t.integer "count"
     t.integer "num"
@@ -21,11 +20,9 @@ ActiveRecord::Schema.define(version: 2021_05_24_124524) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "set"
     t.index ["training_id"], name: "index_menus_on_training_id"
-    t.index ["user_id"], name: "index_menus_on_user_id"
   end
 
   create_table "plannings", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
-    t.bigint "user_id", null: false
     t.integer "level", default: 10, null: false
     t.float "condition", default: 1.0, null: false
     t.integer "adjustment", default: 0, null: false
@@ -33,7 +30,6 @@ ActiveRecord::Schema.define(version: 2021_05_24_124524) do
     t.integer "allowed_time", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["user_id"], name: "index_plannings_on_user_id"
   end
 
   create_table "trainings", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
@@ -47,14 +43,5 @@ ActiveRecord::Schema.define(version: 2021_05_24_124524) do
     t.string "description"
   end
 
-  create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
-    t.string "email"
-    t.string "password_digest"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
   add_foreign_key "menus", "trainings"
-  add_foreign_key "menus", "users"
-  add_foreign_key "plannings", "users"
 end
