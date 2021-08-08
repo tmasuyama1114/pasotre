@@ -20,8 +20,4 @@ require("jquery")
 // or the `imagePath` JavaScript helper below.
 //
 const images = require.context('../images', true)
-<<<<<<< HEAD
 const imagePath = (name) => images(name, true)
-=======
-// const imagePath = (name) => images(name, true)
->>>>>>> 26811f02f1cac3ed4cb6aadbae3d51cf97b32504
