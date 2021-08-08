@@ -2,7 +2,9 @@
   color: #ff0000;
 }
 
-.jumbotron {
+/* Top Contents */
+.top-bg {
   /* background-color: orange; */
   background-image: url("../../../images/pages/background.jpg");
+  background-size: cover;
 }
