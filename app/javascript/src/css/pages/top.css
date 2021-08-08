@@ -1,8 +1,32 @@
+/* Common */
+h1, h2 {
+  margin-top: 10px;
+  font-size: 38px;
+  font-weight: 100;
+  color: #555;
+  line-height: 50px;
+}
+
+h3 {
+  font-size: 22px;
+  font-weight: 300;
+  color: #555;
+  line-height: 30px;
+}
+
 /* TOP Contents */
 .top-bg {
   /* background-color: orange; */
   background-image: url("../../../images/pages/background.jpg");
   background-size: cover;
+}
+
+.top-title {
+  margin-top: 10px;
+  font-size: 38px;
+  font-weight: 100;
+  color: #FFFFFF;
+  line-height: 50px;
 }
 
 .top-description {
@@ -40,12 +64,46 @@
   text-decoration: none;
 }
 
-.btn-signup:hober {
+.btn-training {
+  display: inline-block;
+  width: 150px;
+  height: 50px;
+  margin: 0 5px;
+  padding: 16px 20px 0 20px;
+  background: #66d6c5;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 16px;
+  color: #fff;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.btn-signup:hover {
   opacity: 0.5;
   transition: all 0.5s 0s ease;
 }
 
-.btn-about:hober {
+.btn-about:hover {
   opacity: 0.5;
   transition: all 0.5s 0s ease;
+}
+
+.btn-training:hover {
+  opacity: 0.5;
+  transition: all 0.5s 0s ease;
+}
+
+
+/* FEATURES */
+.features-box-icon {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto;
+  background: #f8f8f8;
+  font-size: 60px;
+  color: #555;
+  line-height: 120px;
+  border-radius: 50%;
+  transition: all .6s;
 }

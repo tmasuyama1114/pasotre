@@ -3,43 +3,51 @@
 <%# TOP %>
 <div class="top-bg">
   <div class="container-fluid text-center p-5 text-light">
-    <h1 class="my-5 mx-2">PASOTRE</h1>
-    <div class="top-description mt-3 mx-2 mb-5">
+    <div class="top-title fw-bold">PASOTRE</div>
+    <div class="top-description mt-3 mx-2 mb-5 text-white">
       <p>AI パーソナルトレーナーが<p>
-      <p>今日のアナタにピッタリなトレーニングメニューを作ります</p>
+      <p>今日のアナタにピッタリなトレーニングメニューを作成</p>
+      <p>(ユーザ登録は不要)</p>
     </div>
     <% if logged_in? %>
-      <%= link_to "トレーニング開始", new_planning_path, class: "btn btn-success mt-2 mb-5" %>
+      <%= link_to "Training!", new_planning_path, class: "btn-training" %>
     <% else %>
-      <%= link_to "ユーザ登録", signup_path, class: "btn-signup" %>
-      <%= link_to "使い方", about_path, class: "btn-about" %>
+      <%= link_to "Signup", signup_path, class: "btn-signup" %>
+      <%= link_to "Learn more", about_path, class: "btn-about" %>
     <% end %>
   </div>
 </div>
 
-<%# ABOUT %>
+<%# FEATURES %>
 <div class="container text-center my-5 border-bottom">
-  <h3 class="text-secondary mt-3 mb-5">ABOUT</h3>
-  <div class="row">
-    <div class="col-lg-4">
-      <i class="fas fa-chart-line fa-3x"></i>
-      <h4 class="my-4">今日のアナタ専用</h4>
+  <h2 class="text-secondary mt-3 mb-5">FEATURES</h2>
+  <div style="visibility: visible; animation-name: fadeInUp;"><span></span></div>
+  <div class="row mb-5">
+    <div class="col-lg-4 my-3">
+      <div class="features-box-icon">
+        <i class="fas fa-chart-line"></i>
+      </div>
+      <h3 class="my-4">Only for You</h3>
       <div class="text-secondary mt-1">
         <p>今の体調や気分を教えてください</p>
         <p>最適なメニューを作ります</p>
       </div>
     </div>
-    <div class="col-lg-4">
-      <i class="fas fa-dumbbell fa-3x"></i>
-      <h4 class="my-4">無理なくボディメイク</h4>
+    <div class="col-lg-4 my-3">
+      <div class="features-box-icon">
+        <i class="fas fa-dumbbell"></i>
+      </div>
+      <h3 class="my-4">Fit Today</h3>
       <div class="text-secondary mt-1">
         <p>負荷はその日に合わせて調整します</p>
-        <p>筋トレ初心者にオススメ</p>
+        <p>無理をする必要はありません</p>
       </div>
     </div>
-    <div class="col-lg-4">
-      <i class="fas fa-robot fa-3x"></i>
-      <h4 class="my-4">AI トレーナー</h4>
+    <div class="col-lg-4 my-3">
+      <div class="features-box-icon">
+        <i class="fas fa-robot"></i>
+      </div>
+      <h3 class="my-4">AI Trainer</h3>
       <div class="text-secondary mt-1">
         <p>いつでもどこでも</p>
         <p>AI トレーナーが付き添います</p>
@@ -50,25 +58,24 @@
 
 <%# HOW TO USE %>
 <div class="container text-center my-5 border-bottom">
-  <h3 class="text-secondary mt-3 mb-5">HOW TO USE</h3>
+  <h2 class="text-secondary mt-3 mb-5">HOW TO USE</h2>
   <div class="row justify-content-center">
     <div class="col-md-4">
-      <i class="fas fa-chart-line fa-3x"></i>
       <h4 class="my-4">1. ヒアリング</h4>
       <div class="text-secondary mt-1">
         <p>今日の気分や体調を入力</p>
       </div>
     </div>
     <div class="col-md-4">
-      <i class="fas fa-dumbbell fa-3x"></i>
-      <h4 class="my-4">2. すぐトレーニング</h4>
+      <h3 class="my-4">2. すぐトレーニング</h3>
       <div class="text-secondary mt-1">
         <p>自動生成メニューでトレーニング</p>
       </div>
     </div>
   </div>
+  <%= link_to "Learn more", about_path, class: "btn-about my-3 mb-5" %>
   <% if logged_in? %>
-    <%= link_to "トレーニング開始", new_planning_path, class: "btn btn-success mt-2 mb-5" %>
+    <%= link_to "Training!", new_planning_path, class: "btn-training" %>
   <% end %>
 </div>
 
