@@ -1,10 +1,51 @@
-.test {
-  color: #ff0000;
-}
-
-/* Top Contents */
+/* TOP Contents */
 .top-bg {
   /* background-color: orange; */
   background-image: url("../../../images/pages/background.jpg");
   background-size: cover;
+}
+
+.top-description {
+  color: #DDDDDD;
+}
+
+.btn-signup {
+  display: inline-block;
+  width: 150px;
+  height: 50px;
+  margin: 0 5px;
+  padding: 16px 20px 0 20px;
+  background: #66d6c5;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 16px;
+  color: #fff;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.btn-about {
+  display: inline-block;
+  width: 150px;
+  height: 50px;
+  margin: 0 5px;
+  padding: 16px 20px 0 20px;
+  background: #444;
+  background: rgba(0, 0, 0, 0.3);
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 16px;
+  color: #fff;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.btn-signup:hober {
+  opacity: 0.5;
+  transition: all 0.5s 0s ease;
+}
+
+.btn-about:hober {
+  opacity: 0.5;
+  transition: all 0.5s 0s ease;
 }

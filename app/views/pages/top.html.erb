@@ -2,17 +2,17 @@
 <%= stylesheet_pack_tag 'pages/top' %>
 <%# TOP %>
 <div class="top-bg">
-  <%= render 'layouts/navbar' %>
   <div class="container-fluid text-center p-5 text-light">
-    <h1 class="m-2">PASOTRE</h1>
-    <div class="m-2">
+    <h1 class="my-5 mx-2">PASOTRE</h1>
+    <div class="top-description mt-3 mx-2 mb-5">
       <p>AI パーソナルトレーナーが<p>
       <p>今日のアナタにピッタリなトレーニングメニューを作ります</p>
     </div>
     <% if logged_in? %>
       <%= link_to "トレーニング開始", new_planning_path, class: "btn btn-success mt-2 mb-5" %>
     <% else %>
-      <%= link_to "ユーザ登録する", signup_path, class: "btn btn-primary" %>
+      <%= link_to "ユーザ登録", signup_path, class: "btn-signup" %>
+      <%= link_to "使い方", about_path, class: "btn-about" %>
     <% end %>
   </div>
 </div>
