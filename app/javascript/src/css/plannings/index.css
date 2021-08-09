@@ -1,0 +1,59 @@
+/* Common */
+h1, h2 {
+  margin-top: 10px;
+  font-size: 38px;
+  font-weight: 100;
+  color: #555;
+  line-height: 50px;
+}
+
+h3 {
+  font-size: 22px;
+  font-weight: 300;
+  color: #555;
+  line-height: 30px;
+}
+
+.menu {
+  color: #555;
+}
+
+.btn-next {
+  display: inline-block;
+  width: 150px;
+  height: 50px;
+  margin: 0 5px;
+  padding: 16px 20px 0 20px;
+  background: #66d6c5;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 16px;
+  color: #fff;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.btn-next:hover {
+  opacity: 0.5;
+  transition: all 0.5s 0s ease;
+}
+
+.btn-last {
+  display: inline-block;
+  width: 150px;
+  height: 50px;
+  margin: 0 5px;
+  padding: 16px 20px 0 20px;
+  background: #142b27;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 16px;
+  color: #fff;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.btn-last:hover {
+  opacity: 0.5;
+  transition: all 0.5s 0s ease;
+}
