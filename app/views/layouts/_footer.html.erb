@@ -1,9 +1,26 @@
+<%= javascript_pack_tag 'layouts/footer', 'data-turbolinks-track': 'reload' %>
+<%= stylesheet_pack_tag 'layouts/footer' %>
+
 <footer>
-  <div class="container-fluid bg-secondary text-white">
-    <div class="text-center">
-      <p>
-        © 2021 - PASOTRE
-      </p>
-    </div>
+  <div class="col-sm-12 footer-copyright">
+    &copy; 2021 - PASOTRE by tmasuyama
   </div>
 </footer>
+
+<style>
+footer {
+  width: 100%;
+	padding: 35px 0;
+  color: #888;
+  background: #f8f8f8;
+	border-top: 1px dotted #ddd;
+  text-align: center;
+
+  position: absolute;/*←絶対位置*/
+  bottom: 0; /*下に固定*/
+}
+
+.footer-copyright {
+	margin-top: 25px;
+}
+</style>
