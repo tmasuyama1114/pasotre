@@ -14,6 +14,14 @@ $(function () {
 
 });
 
+// 説明文をポップアップ表示させる関数
+$(function(){
+  $('.help-tooltip-trigger').on('click',function(){
+    $(this).next().slideToggle('fast');
+  });
+});
+
+// フラッシュメッセージを時間差で消す関数
 $(function(){
   setTimeout("$('.flash-message').fadeOut('slow')", 2000);
 });

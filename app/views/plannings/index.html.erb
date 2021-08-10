@@ -2,25 +2,31 @@
 <%= stylesheet_pack_tag 'plannings/index' %>
 
 <div class="container choose_box text-center my-5">
-  <h1>TODAY'S  MENU</h1>
+  <h1>Today's  Menu</h1>
 
-  <div class="row mb-5">
+  <div class="row my-5">
     <% @menus.each do |menu| %>
-      <div id="<%= menu.num %>" class="col-sm-4 mb-4 text-center">
+      <div id="<%= menu.num %>" class="col-md-6 offset-md-3 text-center">
         <div class="card">
-          <div class="card-header bg-light"><h4 class="my-4"><%= menu.training.name %></h4></div>
+          <div class="card-header bg-light">
+            <h3 class="mt-4 mb-2"><%= menu.training.name %></h3>
+            <span class="help-tooltip-trigger">
+              <i class="far fa-question-circle"></i>
+            </span>
+            <div class="help-tooltip">
+              <p><%= menu.training.description %></p>
+            </div>
+          </div>
           <div class="card-body">
-            <h4 class="card-title"><%= menu.count %> 回</h4>
+            <h2 class="card-title">x <%= menu.count %></h2>
           </div>
         </div>
         <% if menu.num == @menus.length - 1 %>
-          <a class="btn-last mt-3 mb-5" href="<%= new_planning_path %>">Clear!</a>
+          <a class="btn-last mt-4 mb-5" href="<%= new_planning_path %>">Clear!</a>
         <% else %>
-          <a class="btn-next mt-3 mb-5">Done!</a>
+          <a class="btn-next mt-4 mb-5">Done!</a>
         <% end %>
       </div>
     <% end %>
   </div>
 </div>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
