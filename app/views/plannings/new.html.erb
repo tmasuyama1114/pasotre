@@ -11,7 +11,7 @@
       <!-- 質問1 -->
       <div id="q_01" class="question">
         <div class="offset-sm-2 col-sm-8 mt-5 mb-4">
-          <h3>Q. 腕立て伏せを一気に何回できますか？ (1/5)</h3>
+          <h3>Q. 腕立て伏せなら何回できますか？ (1/5)</h3>
         </div>
         <div class="offset-sm-2 col-sm-8 mb-2">
           <%= f.select :condition, [5, 10, 15, 20, 25, 30, 35, 40, 45, 50], class: "form-select" %> 回
@@ -22,14 +22,14 @@
       <!-- 質問2 -->
       <div id="q_02" style="display: none;">
         <div class="offset-sm-2 col-sm-8 mt-5 mb-4">
-          <b>Q. 今日の調子は？ (2/5)</b>
+          <h3>Q. 今日の調子は？ (2/5)</h3>
         </div>
         <div class="offset-sm-2 col-sm-8 mb-2">
-          <%= f.radio_button :condition, 1.4, {checked: true} %> 最高! 
-          <%= f.radio_button :condition, 1.2 %> 良い 
-          <%= f.radio_button :condition, 1.0 %> 普通 
-          <%= f.radio_button :condition, 0.8 %> 微妙 
-          <%= f.radio_button :condition, 0.6 %> 最悪... 
+          <%= f.radio_button :condition, 1.4, {checked: true} %> 最高!
+          <%= f.radio_button :condition, 1.2 %> 良い
+          <%= f.radio_button :condition, 1.0 %> 普通
+          <%= f.radio_button :condition, 0.8 %> 微妙
+          <%= f.radio_button :condition, 0.6 %> 最悪...
         </div>
         <a class="btn-next my-5" href="#q_03">Next</a>
       </div>
@@ -37,14 +37,14 @@
       <!-- 質問3 -->
       <div id="q_03" style="display: none;">
         <div class="offset-sm-2 col-sm-8 mt-5 mb-4">
-          <b>Q. 負荷はどんな感じにしますか？ (3/5)</b>
+          <h3>Q. 負荷はどんな感じにしますか？ (3/5)</h3>
         </div>
         <div class="offset-sm-2 col-sm-8 mb-2">
-          <%= f.radio_button :adjustment, 2, {checked: true} %> 強く 
-          <%= f.radio_button :adjustment, 1 %> 少し強く 
-          <%= f.radio_button :adjustment, 0 %> そのまま 
-          <%= f.radio_button :adjustment, -1 %> 少し弱く 
-          <%= f.radio_button :adjustment, -2 %> 弱く 
+          <%= f.radio_button :adjustment, 2, {checked: true} %> 強く
+          <%= f.radio_button :adjustment, 1 %> 少し強く
+          <%= f.radio_button :adjustment, 0 %> そのまま
+          <%= f.radio_button :adjustment, -1 %> 少し弱く
+          <%= f.radio_button :adjustment, -2 %> 弱く
         </div>
         <a class="btn-next my-5" href="#q_04">Next</a>
       </div>
@@ -52,15 +52,15 @@
       <!-- 質問4 -->
       <div id="q_04" style="display: none;">
         <div class="offset-sm-2 col-sm-8 mt-5 mb-4">
-          <b>Q. どこを特に鍛えたいですか？ (4/5)</b>
+          <h3>Q. どこを特に鍛えたいですか？ (4/5)</h3>
         </div>
         <div class="offset-sm-2 col-sm-8 mb-2">
-          <%= f.radio_button :focus, '肩', {checked: true} %> 肩 
-          <%= f.radio_button :focus, '胸' %> 胸 
-          <%= f.radio_button :focus, '腕' %> 腕 
-          <%= f.radio_button :focus, '背中' %> 背中 
-          <%= f.radio_button :focus, '腹' %> 腹 
-          <%= f.radio_button :focus, '脚' %> 脚 
+          <%= f.radio_button :focus, '肩', {checked: true} %> 肩
+          <%= f.radio_button :focus, '胸' %> 胸
+          <%= f.radio_button :focus, '腕' %> 腕
+          <%= f.radio_button :focus, '背中' %> 背中
+          <%= f.radio_button :focus, '腹' %> 腹
+          <%= f.radio_button :focus, '脚' %> 脚
         </div>
         <a class="btn-next my-5" href="#q_05">Next</a>
       </div>
@@ -68,12 +68,12 @@
       <!-- 質問5 -->
       <div id="q_05" style="display: none;">
         <div class="offset-sm-2 col-sm-8 mt-5 mb-4">
-          <b>Q. 何分ぐらいトレーニングしますか？ (5/5)</b>
+          <h3>Q. 何分ぐらいトレーニングしますか？ (5/5)</h3>
         </div>
         <div class="offset-sm-2 col-sm-8 mb-2">
           <%= f.select :allowed_time, [5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60], class: "form-select" %> 分
         </div>
-        <%= f.submit 'Training!', class: 'btn-make my-3' %>
+        <%= f.submit 'Start!', class: 'btn btn-make my-3' %>
       </div>
     </div>
 
