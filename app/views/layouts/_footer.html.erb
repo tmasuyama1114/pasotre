@@ -1,8 +1,10 @@
 <%= javascript_pack_tag 'layouts/footer', 'data-turbolinks-track': 'reload' %>
-<%= stylesheet_pack_tag 'layouts/footer' %>
+<%= stylesheet_pack_tag 'layouts/footer', media: 'all', 'data-turbolinks-track': 'reload' %>
 
-<footer>
-  <div class="col-sm-12 footer-copyright">
-    &copy; 2021 - PASOTRE by tmasuyama
-  </div>
-</footer>
+<div class="footerFixed">
+  <footer>
+    <div class="col-sm-12 footer-copyright">
+      &copy; 2021 - PASOTRE by tmasuyama
+    </div>
+  </footer>
+</div>
