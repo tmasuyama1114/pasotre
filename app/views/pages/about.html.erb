@@ -5,9 +5,32 @@
   <h1>About</h1>
 
   <div class="row my-5">
-    <div class="col-md-6 offset-md-3 text-center">
-      <h3 class="mt-4 mb-2">1. Planning</h3>
-      <p class="my-4">aaaaaaaaa</p>
+    <div class="col-sm-6 offset-sm-3 my-4">
+      <div class="text-center">
+        <h2 class="my-4">1. Planning</h2>
+        <p>5 つの質問に答えて<br>トレーニングメニューを生成</p>
+        <%= image_pack_tag 'pages/about/plannings_new.gif' %>
+      </div>
     </div>
+
+    <div class="col-sm-6 offset-sm-3 my-4">
+      <div class="text-center">
+        <h2 class="my-4">2. Training</h2>
+        <p>質問をもとに自動生成されたメニューで<br>順番にトレーニングするだけ！</p>
+        <%= image_pack_tag 'pages/about/plannings_index.gif' %>
+      </div>
+    </div>
+
+    <div class="col-sm-6 offset-sm-3 my-4">
+      <div class="text-center">
+        <h2 class="my-4">3. Check</h2>
+        <p>初めてやるトレーニングは<br>やり方を確認しておきましょう</p>
+        <%= image_pack_tag 'pages/about/plannings_tooltip.gif' %>
+      </div>
+    </div>
+
   </div>
+
+  <h3 class="mb-3">Let's Start Training!</h3>
+  <%= link_to "Training!", new_planning_path, class: "btn-training" %>
 </div>

@@ -8,12 +8,42 @@ h1, h2 {
 }
 
 h3 {
-  font-size: 24px;
-  font-weight: 300;
+  font-size: 28px;
+  font-weight: 100;
   color: #555;
   line-height: 30px;
 }
 
+/* Description */
 p {
   font-weight:normal;
+  color: #777;
+}
+
+img {
+  width: 400px;
+  margin: 5px;
+  border: dotted 0.2px #999;;
+  border-radius: 4px;
+}
+
+/* For Training */
+.btn-training {
+  display: inline-block;
+  width: 150px;
+  height: 50px;
+  margin: 0 5px;
+  padding: 16px 20px 0 20px;
+  background: #66d6c5;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 16px;
+  color: #fff;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.btn-training:hover {
+  opacity: 0.5;
+  transition: all 0.5s 0s ease;
 }

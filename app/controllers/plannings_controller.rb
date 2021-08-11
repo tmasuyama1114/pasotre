@@ -2,7 +2,7 @@ class PlanningsController < ApplicationController
   require 'securerandom'
 
   def index
-    menu_latest = Menu.first
+    menu_latest = Menu.last
     set_latest = menu_latest.set
     @menus = Menu.where(set: set_latest).order(num: :asc)
   end
