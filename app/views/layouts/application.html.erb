@@ -22,7 +22,9 @@
     <div class="container">
       <%= render 'layouts/flash_messages' %>
     </div>
-    <%= yield %>
-    <%= render 'layouts/footer' %>
+    <div id="wrapper">
+      <%= yield %>
+      <%= render 'layouts/footer' %>
+    </div>
   </body>
 </html>
