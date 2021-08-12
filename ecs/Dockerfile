@@ -28,4 +28,12 @@ ADD . $APP_PATH
 RUN yarn install --check-files
 RUN yarn webpack --config ./config/webpack/development.js
 
+# Nginxと通信を行うための準備
 RUN mkdir -p tmp/sockets
+RUN mkdir -p tmp/pids
+
+VOLUME $APP_PATH/public
+VOLUME $APP_PATH/tmp
+
+RUN yarn install --check-files
+RUN SECRET_KEY_BASE=placeholder bundle exec rails assets:precompile

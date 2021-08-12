@@ -1,41 +1,39 @@
-version: '3.3'
+version: "3"
 services:
   web:
     build:
       context: .
-      dockerfile: ./docker/nginx/Dockerfile
+    command: bundle exec puma -C config/puma.rb
     volumes:
-      - ./public:/usr/share/nginx/public:cached
-      - ./log/nginx:/var/log/nginx
+      - .:/pasotre
+      - public-data:/pasotre/public
+      - tmp-data:/pasotre/tmp
+      - log-data:/pasotre/log
+    depends_on:
+      - db
+  db:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+    cap_add:
+      - SYS_NICE
+    ports:
+      - '3306:3306'
+    command: --default-authentication-plugin=mysql_native_password
+    volumes:
+      - db-data:/var/lib/mysql
+  nginx:
+    build:
+      context: nginx
+    volumes:
+      - public-data:/pasotre/public
+      - tmp-data:/pasotre/tmp
     ports:
       - 80:80
     depends_on:
-      - app
-  app:
-    env_file: ./.env
-    build: .
-    command: bundle exec rails s -b 0.0.0.0
-    volumes:
-      - .:/app:cached
-    ports:
-      - 3000:3000
-    depends_on:
-      - database
-    tty: true
-    stdin_open: true
-    environment:
-      RAILS_HOST: database
-      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
-  database:
-    env_file: ./.env
-    build:
-      context: .
-      dockerfile: ./docker/mysql/Dockerfile
-    environment:
-      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
-      MYSQL_DATABASE: pasotre_development
-    ports:
-      - "3306:3306"
-    volumes:
-      - ./docker/mysql/my.cnf:/etc/mysql/conf.d/my.cnf
-      - ./log/mysql:/var/log/mysql
+      - web
+volumes:
+  public-data:
+  tmp-data:
+  log-data:
+  db-data:
