@@ -21,7 +21,7 @@ $(function(){
   });
 });
 
-// フラッシュメッセージを時間差で消す関数
-$(function(){
-  setTimeout("$('.flash-message').fadeOut('slow')", 2000);
-});
+// // フラッシュメッセージを時間差で消す関数
+// $(function(){
+//   setTimeout("$('.flash-message').fadeOut('slow')", 2000);
+// });
