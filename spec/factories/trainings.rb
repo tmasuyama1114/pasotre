@@ -2,58 +2,58 @@ FactoryBot.define do
   factory :training do
   end
 
-  factory :training_ashi, class: 'Training' do
-    name { "脚テスト" }
+  factory :training_leg, class: 'Training' do
+    name { "test_leg" }
     part { "脚" }
     point { 1 }
     time { 1 }
     basis { 1 }
-    description { "テスト用の脚トレーニング" }
+    description { "leg training for test" }
   end
 
-  factory :training_mune, class: 'Training' do
-    name { "胸テスト" }
+  factory :training_chest, class: 'Training' do
+    name { "test_chest" }
     part { "胸" }
     point { 1 }
     time { 1 }
     basis { 1 }
-    description { "テスト用の胸トレーニング" }
+    description { "chest training for test" }
   end
 
-  factory :training_kata, class: 'Training' do
-    name { "肩テスト" }
+  factory :training_shoulder, class: 'Training' do
+    name { "test_shoulder" }
     part { "肩" }
     point { 1 }
     time { 1 }
     basis { 1 }
-    description { "テスト用の肩トレーニング" }
+    description { "shoulder training for test" }
   end
 
-  factory :training_senaka, class: 'Training' do
-    name { "背中テスト" }
+  factory :training_back, class: 'Training' do
+    name { "test_back" }
     part { "背中" }
     point { 1 }
     time { 1 }
     basis { 1 }
-    description { "テスト用の背中トレーニング" }
+    description { "back training for test" }
   end
 
-  factory :training_hara, class: 'Training' do
-    name { "腹テスト" }
+  factory :training_abdominal, class: 'Training' do
+    name { "test_abdominal" }
     part { "腹" }
     point { 1 }
     time { 1 }
     basis { 1 }
-    description { "テスト用の腹トレーニング" }
+    description { "abdominal training for test" }
   end
 
-  factory :training_ude, class: 'Training' do
-    name { "腕テスト" }
+  factory :training_arm, class: 'Training' do
+    name { "test_arm" }
     part { "腕" }
     point { 1 }
     time { 1 }
     basis { 1 }
-    description { "テスト用の腕トレーニング" }
+    description { "arm training for test" }
   end
 
 end
