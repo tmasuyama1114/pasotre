@@ -102,11 +102,23 @@ RSpec.describe Training, type: :model do
     end
   end
 
-end
+  describe '[Fail] create record for Menu model' do
+    context 'when creates records' do
+      it 'should fail by the training data with the wrong part' do
+        # create the test data
+        training_fails_wrong_part = FactoryBot.build(:training_fails_wrong_part)
 
-# ashi
-# mune
-# kata
-# senaka
-# hara
-# ude
+        # cannot save the test data
+        expect(training_fails_wrong_part).not_to be_valid
+      end
+
+      it 'should fail by the training data with the blank part' do
+        # create the test data
+        training_fails_blank_part = FactoryBot.build(:training_fails_blank_part)
+
+        # cannot save the test data
+        expect(training_fails_blank_part).not_to be_valid
+      end
+    end
+  end
+end

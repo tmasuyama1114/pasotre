@@ -56,4 +56,23 @@ FactoryBot.define do
     description { "arm training for test" }
   end
 
+  # Fail Patterns
+  factory :training_fails_wrong_part, class: 'Training' do
+    name { "test_fail_wrong_part" }
+    part { "顔" }
+    point { 1 }
+    time { 1 }
+    basis { 1 }
+    description { "face training for test should fail by checking wrong part" }
+  end
+
+  factory :training_fails_blank_part, class: 'Training' do
+    name { "test_fail_blank_part" }
+    part {  }
+    point { 1 }
+    time { 1 }
+    basis { 1 }
+    description { "face training for test should fail by checking blank part" }
+  end
+
 end
