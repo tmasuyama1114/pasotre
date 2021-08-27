@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Training, type: :model do
-  describe '[Success] create record for Menu model' do
+  describe '[Success] create record for Training model' do
     context 'when creates records' do
       it 'should success by the training data with the leg part' do
         # create the test data
@@ -102,7 +102,7 @@ RSpec.describe Training, type: :model do
     end
   end
 
-  describe '[Fail] create record for Menu model' do
+  describe '[Fail] create record for Training model' do
     context 'when creates blank records' do
       it 'should fail by the training data with the blank name' do
         # create the test data

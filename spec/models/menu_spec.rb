@@ -78,7 +78,43 @@ RSpec.describe Menu, type: :model do
         expect(saved_menu.num).to eq(5)
         expect(saved_menu.set).to eq('abcde')
       end
+    end
+  end
 
+
+  describe '[Fail] create record for Menu model' do
+    context 'when creates blank records' do
+      it 'should fail by the menu data with blank count' do
+        menu_fails_blank_count = FactoryBot.build(:menu_fails_blank_count)
+        expect(menu_fails_blank_count).not_to be_valid
+      end
+
+      it 'should fail by the menu data with blank num' do
+        menu_fails_blank_num = FactoryBot.build(:menu_fails_blank_num)
+        expect(menu_fails_blank_num).not_to be_valid
+      end
+
+      it 'should fail by the menu data with blank set' do
+        menu_fails_blank_set = FactoryBot.build(:menu_fails_blank_set)
+        expect(menu_fails_blank_set).not_to be_valid
+      end
+
+      it 'should fail by the menu data with blank training' do
+        menu_fails_blank_training = FactoryBot.build(:menu_fails_blank_training)
+        expect(menu_fails_blank_training).not_to be_valid
+      end
+    end
+
+    context 'when creates invalid records' do
+      it 'should fail by the menu data with invalid count' do
+        menu_fails_invalid_count = FactoryBot.build(:menu_fails_invalid_count)
+        expect(menu_fails_invalid_count).not_to be_valid
+      end
+
+      it 'should fail by the menu data with invalid num' do
+        menu_fails_invalid_num = FactoryBot.build(:menu_fails_invalid_num)
+        expect(menu_fails_invalid_num).not_to be_valid
+      end
     end
   end
 

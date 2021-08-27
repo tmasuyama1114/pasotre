@@ -2,7 +2,7 @@ FactoryBot.define do
   factory :training do
   end
 
-  ########## Succsess: each records of part ##########
+  ########## Succsess: trainings for each parts ##########
   factory :training_leg, class: 'Training' do
     name { "test_leg" }
     part { "脚" }
