@@ -103,13 +103,13 @@ RSpec.describe Training, type: :model do
   end
 
   describe '[Fail] create record for Menu model' do
-    context 'when creates records' do
-      it 'should fail by the training data with the wrong part' do
+    context 'when creates blank records' do
+      it 'should fail by the training data with the blank name' do
         # create the test data
-        training_fails_wrong_part = FactoryBot.build(:training_fails_wrong_part)
+        training_fails_blank_name = FactoryBot.build(:training_fails_blank_name)
 
         # cannot save the test data
-        expect(training_fails_wrong_part).not_to be_valid
+        expect(training_fails_blank_name).not_to be_valid
       end
 
       it 'should fail by the training data with the blank part' do
@@ -118,6 +118,80 @@ RSpec.describe Training, type: :model do
 
         # cannot save the test data
         expect(training_fails_blank_part).not_to be_valid
+      end
+
+      it 'should fail by the training data with the blank point' do
+        # create the test data
+        training_fails_blank_point = FactoryBot.build(:training_fails_blank_point)
+
+        # cannot save the test data
+        expect(training_fails_blank_point).not_to be_valid
+      end
+
+      it 'should fail by the training data with the blank time' do
+        # create the test data
+        training_fails_blank_time = FactoryBot.build(:training_fails_blank_time)
+
+        # cannot save the test data
+        expect(training_fails_blank_time).not_to be_valid
+      end
+
+      it 'should fail by the training data with the blank basis' do
+        # create the test data
+        training_fails_blank_basis = FactoryBot.build(:training_fails_blank_basis)
+
+        # cannot save the test data
+        expect(training_fails_blank_basis).not_to be_valid
+      end
+
+      it 'should fail by the training data with the blank description' do
+        # create the test data
+        training_fails_blank_description = FactoryBot.build(:training_fails_blank_description)
+
+        # cannot save the test data
+        expect(training_fails_blank_description).not_to be_valid
+      end
+    end
+
+    context 'when creates invalid records' do
+      it 'should fail by the training data with invalid name' do
+        # create the test data
+        training_fails_invalid_name = FactoryBot.build(:training_fails_invalid_name)
+
+        # cannot save the test data
+        expect(training_fails_invalid_name).not_to be_valid
+      end
+
+      it 'should fail by the training data with the invalid part' do
+        # create the test data
+        training_fails_invalid_part = FactoryBot.build(:training_fails_invalid_part)
+
+        # cannot save the test data
+        expect(training_fails_invalid_part).not_to be_valid
+      end
+
+      it 'should fail by the training data with the invalid point' do
+        # create the test data
+        training_fails_invalid_point = FactoryBot.build(:training_fails_invalid_point)
+
+        # cannot save the test data
+        expect(training_fails_invalid_point).not_to be_valid
+      end
+
+      it 'should fail by the training data with the invalid time' do
+        # create the test data
+        training_fails_invalid_time = FactoryBot.build(:training_fails_invalid_time)
+
+        # cannot save the test data
+        expect(training_fails_invalid_time).not_to be_valid
+      end
+
+      it 'should fail by the training data with the invalid basis' do
+        # create the test data
+        training_fails_invalid_basis = FactoryBot.build(:training_fails_invalid_basis)
+
+        # cannot save the test data
+        expect(training_fails_invalid_basis).not_to be_valid
       end
     end
   end
