@@ -6,12 +6,12 @@
 
 
 ## 公開先
-2021年8月現在、下記 URL にて公開しております。
+2021年8月現在、下記 URL にて公開しております。  
 https://pasotre.com/
 
 
 ## アーキテクチャ図 (構成図)
-Cacoo にて公開しております。
+Cacoo にて公開しております。  
 https://cacoo.com/diagrams/f5e5d6X7EGjPXUWw/CC53A
 
 
