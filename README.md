@@ -1,58 +1,31 @@
-開発の流れ
+# 本リポジトリについて
+なかなか外に出ることが難しい昨今、自宅で道具なしのトレーニングを支援するアプリケーションが欲しいと思い、
+自分のために作成した筋トレ支援アプリケーションのリポジトリとなります。
 
-https://qiita.com/siida36/items/880d92559af9bd245c34
+その日の体調、鍛えたい部位、使える時間などを入力すると、自動でトレーニングメニューを生成してくれます。
 
-まずは main に戻る
-
-```
-git checkout main
-```
-
-リモートリポジトリの最新状態を反映
-
-```
-git pull
-```
-
-開発するにあたり新しいブランチを切る
-
-```
-git checkout -b feature/xxxx
-```
-
-反映
-
-```
-git add .
-git commit -m "[add] #1 xxxxxxxxxx"
-```
-コミット種別は fix, add, update, remove のどれか
-
-レビューしてもらうためにリモートリポジトリへ push
-```
-git push origin feature/xxxx
-```
-これで PR を出したり、他の人がコードを確認できるようになる
-※絶対に main ブランチへいきなり push しないように!
+
+# 公開先
+2021年8月現在、下記 URL にて公開しております。
+https://pasotre.com/
 
 
-PR を出す
-
-1.Reviewerを指定する
-2.タイトルを「[ブランチ名] 要約」とする
-3.最低限の概要とmergeを受け入れる条件を書く
-4.[Create pull request]を押す
-
-PR を受け入れる
-
-merge してもよいと判断したら "+1" とコメントして Approve
-
-最後にmasterブランチへmerge
-PRの[Conversation]タブを開き、一番下の[Squash and merge]をクリックしてください。[Squash and merge]がない場合は、▼を押してプルダウンから選択してください。
+# アーキテクチャ図 (構成図)
+Cacoo にて公開しております。
+https://cacoo.com/diagrams/f5e5d6X7EGjPXUWw/CC53A
 
 
-
------------------------
-docker-compose run app rails db:migrate
-docker-compose run app rails db:seed
-docker-compose run app yarn add jquery popper.js
+# 主な使用技術
+### アプリケーション関連
+- Ruby (Ruby on Rails)
+- HTML / CSS / JavaScript
+- Nginx
+- MySQL
+### インフラ関連
+- AWS (ECS / ECR / RDS / ALB / Route53 / ACM / CloudWatch)
+- Docker 
+- Terraform
+### CI/CD
+- GitHub Actions
+- RSpec
+- Slack
