@@ -15,7 +15,6 @@ Cacoo にて公開しております。
 https://cacoo.com/diagrams/f5e5d6X7EGjPXUWw/CC53A
 
 
-
 ## 主な使用技術
 
 ### アプリケーション関連
